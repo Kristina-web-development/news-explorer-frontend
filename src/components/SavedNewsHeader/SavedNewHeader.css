@@ -1,0 +1,11 @@
+.savedNews__header {
+  max-width: 1440px;
+  position: relative;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+.savedNews__text-container {
+  width: 85%;
+  margin: 0% auto;
+}
