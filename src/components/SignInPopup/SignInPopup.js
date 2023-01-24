@@ -12,8 +12,8 @@ export default function EditProfilePopup({
     const [errors, setErrors] = useState({ email: '', password: '' });
     const [isValid, setIsValid] = useState(false);
     const [disableButton, setDisableButton] = useState(true);
-    const disabledButtonClass = !disableButton ? "" : "popup__form-button_disabled"
-    const showErrorMessageClass = isValid ? "" : "form__input-error_active"
+    const disabledButtonClass = !disableButton ? "" : "popup__form_button_disabled"
+    const showErrorMessageClass = isValid ? "" : "form__input_error_active"
     const showErrorInputClass = isValid ? "" : "form__input_type_error"
 
     useEffect(() => {
@@ -66,10 +66,10 @@ export default function EditProfilePopup({
         // openSigninPopup={props.openSigninPopup}
         // submitError={props.submitError}
         >
-            <fieldset className="signin__form-fieldset">
-                <label className='signin__form-lable signin__form-lable-email '>Email</label>
+            <fieldset className="signin__form_fieldset">
+                <label className='signin__form_lable signin__form_lable_email'>Email</label>
                 <input
-                    className={`signin__form-input ${showErrorInputClass}`}
+                    className={`signin__form_input ${showErrorInputClass}`}
                     type="email"
                     id="signin-email-input"
                     placeholder="Enter email"
@@ -79,13 +79,13 @@ export default function EditProfilePopup({
                     required
                 />
                 <span
-                    className={`signin__form-input-error  ${showErrorMessageClass}`}
+                    className={`signin__form_input-error  ${showErrorMessageClass}`}
                 >
                     {errors.email}
                 </span>
-                <label className='signin__form-lable signin__form-lable-password'>Password</label>
+                <label className='signin__form_lable signin__form_lable_password'>Password</label>
                 <input
-                    className={`signin__form-input ${showErrorInputClass}`}
+                    className={`signin__form_input ${showErrorInputClass}`}
                     type="password"
                     id="signin-password-input"
                     placeholder="Enter password"
@@ -95,7 +95,7 @@ export default function EditProfilePopup({
                     required
                 />
                 <span
-                    className={`signin__form-input-error ${showErrorMessageClass}`}
+                    className={`signin__form_input_error ${showErrorMessageClass}`}
                 >
                     {errors.password}
                 </span>

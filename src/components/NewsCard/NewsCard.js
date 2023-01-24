@@ -24,6 +24,7 @@ export default function NewsCard({ isLoggedIn }) {
                         }}
                         onMouseEnter={() => setHovered(true)}
                         onMouseLeave={() => setHovered(false)}
+                    // onClick={() => setIsSave(!isSave)}
                     ></div>
                     <div className='newsCard__tip'>Sign in to save articles</div>
 
@@ -45,7 +46,15 @@ export default function NewsCard({ isLoggedIn }) {
                 <li className='newsCard'>
                     <div className='newsCard__image'></div>
                     {/* <div className='newsCard__trash'></div> */}
-                    {location.pathname === "/" ? <div className='newsCard__flag'></div> : <div className='newsCard__trash'></div>}
+                    {location.pathname === "/" ? <div className='newsCard__flag'
+                        style={{
+                            backgroundImage: isSave ? `url(${marked})` :
+                                hovered ? `url(${hoverMark})` : `url(${regularMark})`
+                        }}
+                        onMouseEnter={() => setHovered(true)}
+                        onMouseLeave={() => setHovered(false)}
+                        onClick={() => setIsSave(!isSave)}
+                    ></div> : <div className='newsCard__trash'></div>}
                     {location.pathname === "/" ? null :
                         <>
                             <div className='newsCard__tip'>Remove from saved</div>

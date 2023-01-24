@@ -7,7 +7,7 @@
 .header__color_white {
   background: #ffffff;
 }
-.header__content-title {
+.header__content_title {
   font-family: Roboto Slab, sans-serif;
   font-size: 60px;
   line-height: 64px;
@@ -28,7 +28,7 @@
   justify-content: center;
 }
 
-.header__content-subtitle {
+.header__content_subtitle {
   font-family: Roboto, sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -134,14 +134,14 @@
     align-items: center;
   }
 
-  .header__content-title {
+  .header__content_title {
     max-width: 285px;
     padding-top: 30px;
     font-size: 36px;
     line-height: 40px;
   }
 
-  .header__content-subtitle {
+  .header__content_subtitle {
     max-width: 288px;
   }
 }

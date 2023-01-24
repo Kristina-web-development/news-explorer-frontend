@@ -21,7 +21,7 @@ export default function PopupWithForm({
     // openSignupPopup,
 }) {
     // const fadeIn = isOpen ? "popup_fadein" : null;
-    const fadeIn = "popup_fadein"
+    const fadeIn = "popup__fadein"
 
     useEffect(() => {
         const escKeyClose = (e) => {
@@ -35,13 +35,11 @@ export default function PopupWithForm({
         window.addEventListener('keydown', escKeyClose)
 
         return () => window.removeEventListener('keydown', escKeyClose)
-    }, [
-        // onClose
-    ])
+    })
 
     useEffect(() => {
         const overlayClose = (e) => {
-            if (e.target.classList.contains('popup_fadein')) {
+            if (e.target.classList.contains('popup__fadein')) {
                 // onClose();
                 setIsSignInPopup(false)
                 setIsSignUpPopup(false)
@@ -49,9 +47,7 @@ export default function PopupWithForm({
         }
         window.addEventListener('mouseup', overlayClose)
         return () => window.removeEventListener('mouseup', overlayClose)
-    }, [
-        // onClose
-    ])
+    })
 
     const onSpanClick = () => {
         if (name === 'signin') {
@@ -73,37 +69,37 @@ export default function PopupWithForm({
             <div className={`popup__container container `} >
                 <button
                     type="button"
-                    className={`popup__close-button close-button`}
+                    className={`popup__close_button close_button`}
                     // onClick={onClose}
                     onClick={() => {
                         setIsSignInPopup(false)
                         setIsSignUpPopup(false)
                     }}
                 ></button>
-                <div className={`popup__form-container`}>
+                <div className={`popup__form_container`}>
                     <h2 className={`popup__header`}>{title}</h2>
                     <form
-                        className={`${name}__form popup__form`}
+                        className={`popup__form ${name}__form`}
                         name={`${name}`}
                         onSubmit={onSubmit}
                     >
                         {children}
                         <span
-                            className={`popup__form-submitError`}
+                            className={`popup__form_submitError`}
                         >
                             {submitError}
                         </span>
-                        <fieldset className="popup__form-button-fieldset">
+                        <fieldset className="popup__form_button_fieldset">
                             <button
                                 type="submit"
-                                className={`popup__form-button ${disabledButtonClass}`}
+                                className={`popup__form_button ${disabledButtonClass}`}
                                 disabled={disableButton}
                             >
                                 {buttonText}
                             </button>
                         </fieldset>
                     </form>
-                    <p className='popup__link'> or <Link to="/" className='popup__link-span' onClick={onSpanClick}>{linkName}</Link></p>
+                    <p className='popup__link'> or <Link to="/" className='popup__link_span' onClick={onSpanClick}>{linkName}</Link></p>
                 </div>
             </div>
         </section >

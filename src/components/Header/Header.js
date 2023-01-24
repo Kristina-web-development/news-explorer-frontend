@@ -29,8 +29,8 @@ export default function Header({
                         isSignInPopup={isSignInPopup}
                     />
                     <div className='header__content'>
-                        <h1 className='header__content-title'>What's going on in the world?</h1>
-                        <p className='header__content-subtitle'>Find the latest news on any topic and save them in your personal account.</p>
+                        <h1 className='header__content_title'>What's going on in the world?</h1>
+                        <p className='header__content_subtitle'>Find the latest news on any topic and save them in your personal account.</p>
                         <SearchForm />
                     </div>
                 </header>) : (

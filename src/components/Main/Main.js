@@ -49,7 +49,7 @@ export default function Main({ isLoggedIn,
              */}
             <div className='main__container'>
                 <h2 className='main__header'>Search results</h2>
-                <div className='main__news-container'>
+                <div className='main__news_container'>
                     <NewsCardsList isLoggedIn={isLoggedIn} />
 
                     <button type='button' className="main__button">Show more</button>

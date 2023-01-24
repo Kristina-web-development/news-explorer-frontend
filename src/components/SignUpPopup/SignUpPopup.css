@@ -1,4 +1,4 @@
-.signup__form-fieldset {
+.signup__form_fieldset {
     padding: 0;
     margin: 0;
     display: flex;
@@ -6,7 +6,7 @@
     border: none;
   }
   
-  .signup__form-lable{
+  .signup__form_lable{
     margin: 0;
     padding-top: 22px;
     font-family: 'Inter', sans-serif;
@@ -17,7 +17,7 @@
     color: #2F71E5;
   }
   
-  .signup__form-input {
+  .signup__form_input {
     margin-top: 9px;
     font-family: "Inter", sans-serif;
     font-size: 14px;
@@ -32,7 +32,7 @@
     width: 358px;
   }
   
-  .signin__form-input:active{
+  .signin__form_input:active{
     border-bottom: 1px solid black;
   }
   
@@ -41,13 +41,13 @@
     opacity: 1;
   }
   
-  .form__input-error{
+  .form__input_error{
     visibility: hidden;
     margin: 0;
     padding: 0;
   }
   
-  .form__input-error_active {
+  .form__input_error_active {
    visibility: visible;
    font-family: "Inter", sans-serif;
     font-style: normal;
@@ -60,23 +60,23 @@
   
   @media screen and (max-width: 600px) {
   
-    .signup__form-lable{
+    .signup__form_lable{
       padding: 0;
     }
   
-    .signup__form-lable-email{
+    .signup__form_lable_email{
      padding: 0;
     }
   
-    .signup__form-lable-password{
+    .signup__form_lable_password{
      padding-top: 8px;
     }
   
-    .signup__form-lable-username{
+    .signup__form_lable_username{
       padding-top: 8px;
     }
   
-    .signup__form-input {
+    .signup__form_input {
       width: 100%;
     }
   

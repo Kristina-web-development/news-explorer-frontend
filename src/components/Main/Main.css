@@ -20,8 +20,8 @@
     padding-top: 104px;
    }
    
-   .main__news-container{
-    margin: 0 auto;
+   .main__news_container{
+    margin: 0 ;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,7 +68,7 @@
     line-height: 34px;
    }
 
-   .main__news-container{
+   .main__news_container{
     max-width: 696px;
    }
 
@@ -89,7 +89,7 @@
      margin: 0 auto;
     }
 
-    .main__news-container{
+    .main__news_container{
       max-width: 288px;
       padding-bottom: 24px;
     }

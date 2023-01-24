@@ -32,7 +32,7 @@
 
 .newsCard__tip {
   display: none;
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   position: absolute;
   font-size: 12px;
   font-weight: 500;
@@ -68,7 +68,7 @@
   top: 24px;
   left: 24px;
   padding: 8px 22px;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif ;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -85,7 +85,7 @@
 
 .newsCard__date {
   color: #b6bcbf;
-  font-family: "Source Sans Pro";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -106,7 +106,7 @@
 }
 
 .newsCard__text {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;

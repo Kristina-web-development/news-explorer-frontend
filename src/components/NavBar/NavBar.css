@@ -23,7 +23,7 @@
   transition: 0.3s linear;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 450px) {
   .header__logo {
     padding: 11px 0px 13px 15px;
   }
@@ -40,7 +40,7 @@
   padding-right: 104px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 450px) {
   .header__navigation {
     width: 100%;
     padding-right: 10px;
@@ -54,7 +54,7 @@
   }
 }
 
-.header__home-button {
+.header__home_button {
   background: none;
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -72,24 +72,24 @@
   text-align: center;
 }
 
-.header__home-button:hover {
+.header__home_button:hover {
   color: #ffffff;
 }
 
-.header__home-button_active {
+.header__home_button_active {
   color: #ffffff;
   border-bottom: 3px solid #ffffff;
 }
 
-@media (max-width: 767px) {
-  .header__home-button_active {
+@media (max-width: 450px) {
+  .header__home_button_active {
     border: none;
     margin: 0% 0% 7% 3%;
     font-size: 20px;
   }
 }
 
-.header__login-button {
+.header__login_button {
   background: none;
   width: 152px;
   height: 48px;
@@ -105,15 +105,15 @@
   padding: 12px;
 }
 
-@media (max-width: 767px) {
-  .header__login-button {
+@media (max-width: 450px) {
+  .header__login_button {
     width: 95%;
     margin: 0% auto;
     font-size: 20px;
   }
 }
 
-.header__saved-articles {
+.header__saved_articles {
   background: none;
   height: 48px;
   font-family: "Roboto", sans-serif;
@@ -148,7 +148,7 @@
   color: #ffffff;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 450px) {
   .header__logout {
     width: 95%;
     margin: 0% auto;
@@ -157,7 +157,7 @@
   }
 }
 
-.header__logout-icon {
+.header__logout_icon {
   cursor: pointer;
   height: 24px;
   padding-right: 7px;
@@ -165,26 +165,26 @@
   background: url("../../images/logout-white.svg") no-repeat center;
 }
 
-.header__logo-color_black {
+.header__logo_color_black {
   color: black;
 }
 
-.header__home-button-color_black {
+.header__home_button_black {
   color: black;
 }
-.header__home-button-color_black:hover {
+.header__home_button_black:hover {
   color: black;
 }
 
-.header__saved-articles_black {
+.header__saved_articles_black {
   color: black;
   border-bottom: 3px solid black;
 }
-.header__logout-black {
+.header__logout_black {
   color: black;
   border: 1px solid black;
 }
-.header__logout-icon_black {
+.header__logout_icon_black {
   background: url("../../images/logout.svg") no-repeat center;
 }
 
@@ -199,7 +199,7 @@
   align-items: center;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 450px) {
   .header__menuBtn {
     display: flex;
   }

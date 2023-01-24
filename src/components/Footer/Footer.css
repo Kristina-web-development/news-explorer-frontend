@@ -1,7 +1,7 @@
 .footer {
   max-width: 1440px;
   display: flex;
-  margin: 0;
+  margin: 0 auto;
   justify-content: space-between;
 }
 .footer__copyright {
@@ -28,16 +28,16 @@
   gap: 40px;
 }
 
-.footer__links-featured {
+.footer__links_featured {
   text-decoration: none;
   transition: 0.3s linear;
   display: flex;
   gap: 40px;
 }
-.footer__links-featured:hover {
+.footer__links_featured:hover {
   opacity: 0.8;
 }
-.footer__links-link {
+.footer__links_link {
   margin: 0;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
@@ -48,17 +48,17 @@
   color: #1a1b22;
 }
 
-.footer__links-social {
+.footer__links_social {
   display: flex;
   gap: 26.89px;
   transition: 0.3s linear;
 }
 
-.footer__links-social:hover {
+.footer__links_social:hover {
   opacity: 0.8;
 }
 
-.footer__link-social {
+.footer__link_social {
   margin: 0;
   width: 24px;
   height: 24px;
@@ -115,11 +115,11 @@
     justify-content: space-between;
   }
 
-  .footer__links-featured {
+  .footer__links_featured {
     flex-direction: column;
   }
 
-  .footer__links-social {
+  .footer__links_social {
     gap: 25px;
   }
 

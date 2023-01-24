@@ -1,9 +1,16 @@
 .newsCards {
   max-width: 1248px;
   width: 100%;
+  padding: 64px 15px;
   padding-top: 64px;
   padding-bottom: 64px;
   margin: 0 auto;
+  /* background-color: aqua; */
+}
+
+.newsCards__backgroundColor_grey {
+  background-color: #f5f6f7;
+  width: 100%;
 }
 
 .newsCards__list {
