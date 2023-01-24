@@ -1,14 +1,13 @@
-.header-navbar {
+.header__navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 0.5px solid #ffffff;
   width: 100%;
   padding-top: 19px;
   padding-bottom: 0px;
 }
 
-.header-logo {
+.header__logo {
   margin: 0;
   font-family: "Roboto Slab", sans-serif;
   font-style: normal;
@@ -25,16 +24,16 @@
 }
 
 @media (max-width: 767px) {
-  .header-logo {
+  .header__logo {
     padding: 11px 0px 13px 15px;
   }
 }
 
-.header-logo:hover {
+.header__logo:hover {
   opacity: 0.8;
 }
 
-.header-navigation {
+.header__navigation {
   display: flex;
   justify-content: flex-end;
   gap: 42px;
@@ -42,7 +41,7 @@
 }
 
 @media (max-width: 767px) {
-  .header-navigation {
+  .header__navigation {
     width: 100%;
     padding-right: 10px;
     background-color: #1a1b22;
@@ -55,7 +54,7 @@
   }
 }
 
-.header-home-button {
+.header__home-button {
   background: none;
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -73,24 +72,24 @@
   text-align: center;
 }
 
-.header-home-button:hover {
+.header__home-button:hover {
   color: #ffffff;
 }
 
-.header-home-button_active {
+.header__home-button_active {
   color: #ffffff;
   border-bottom: 3px solid #ffffff;
 }
 
 @media (max-width: 767px) {
-  .header-home-button_active {
+  .header__home-button_active {
     border: none;
     margin: 0% 0% 7% 3%;
     font-size: 20px;
   }
 }
 
-.header-login-button {
+.header__login-button {
   background: none;
   width: 152px;
   height: 48px;
@@ -107,14 +106,14 @@
 }
 
 @media (max-width: 767px) {
-  .header-login-button {
+  .header__login-button {
     width: 95%;
     margin: 0% auto;
     font-size: 20px;
   }
 }
 
-.header-saved-articles {
+.header__saved-articles {
   background: none;
   height: 48px;
   font-family: "Roboto", sans-serif;
@@ -128,7 +127,7 @@
   text-decoration: none;
 }
 
-.header-logout {
+.header__logout {
   display: flex;
   align-items: center;
   gap: 19px;
@@ -150,7 +149,7 @@
 }
 
 @media (max-width: 767px) {
-  .header-logout {
+  .header__logout {
     width: 95%;
     margin: 0% auto;
     font-size: 20px;
@@ -158,7 +157,7 @@
   }
 }
 
-.header-logout__icon {
+.header__logout-icon {
   cursor: pointer;
   height: 24px;
   padding-right: 7px;
@@ -166,30 +165,30 @@
   background: url("../../images/logout-white.svg") no-repeat center;
 }
 
-.header-logo-color-black {
+.header__logo-color_black {
   color: black;
 }
 
-.header-home-button-color-black {
+.header__home-button-color_black {
   color: black;
 }
-.header-home-button-color-black:hover {
+.header__home-button-color_black:hover {
   color: black;
 }
 
-.header-saved-articles-black {
+.header__saved-articles_black {
   color: black;
   border-bottom: 3px solid black;
 }
-.header-logout-black {
+.header__logout-black {
   color: black;
   border: 1px solid black;
 }
-.header-logout__icon-black {
+.header__logout-icon_black {
   background: url("../../images/logout.svg") no-repeat center;
 }
 
-.header-menuBtn {
+.header__menuBtn {
   display: none;
   background: none;
   border: none;
@@ -201,11 +200,11 @@
 }
 
 @media (max-width: 767px) {
-  .header-menuBtn {
+  .header__menuBtn {
     display: flex;
   }
 }
 
-.header-menuBtn img {
+.header__menuBtn img {
   width: 24px;
 }

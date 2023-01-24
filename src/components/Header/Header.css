@@ -1,13 +1,13 @@
-.app_header {
+.header {
   max-width: 1440px;
   position: relative;
   margin: 0 auto;
   background: url("../../images/phone-backgroung.png") no-repeat center/cover;
 }
-.app_header-color_white {
+.header__color_white {
   background: #ffffff;
 }
-.header-content-title {
+.header__content-title {
   font-family: Roboto Slab, sans-serif;
   font-size: 60px;
   line-height: 64px;
@@ -21,14 +21,14 @@
   max-width: 608px;
 }
 
-.header-content {
+.header__content {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.header-content-subtitle {
+.header__content-subtitle {
   font-family: Roboto, sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -134,14 +134,14 @@
     align-items: center;
   }
 
-  .header__title {
+  .header__content-title {
     max-width: 285px;
     padding-top: 30px;
     font-size: 36px;
     line-height: 40px;
   }
 
-  .header__subtitle {
+  .header__content-subtitle {
     max-width: 288px;
   }
 }

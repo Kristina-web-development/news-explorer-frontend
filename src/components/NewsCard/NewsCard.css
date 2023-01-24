@@ -1,133 +1,128 @@
 .newsCard {
-    width: 400px;
-    height: 576px;
-    background: #ffffff;
-    border: 0px solid #ffffff;
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    cursor: pointer;
+  /* width: 400px; */
+  height: 576px;
+  background: #ffffff;
+  border: 0px solid #ffffff;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
 }
-
 .newsCard__image {
-background:url("../../images/lake-photo.png") no-repeat center;
-width: 400px;
-height: 272px;
-background-size: cover;
-border-top-left-radius: 16px;
-border-top-right-radius: 16px;
-
+  background: url("../../images/lake-photo.png") no-repeat center;
+  /* width: 400px; */
+  width: 100%;
+  height: 272px;
+  background-size: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
-
-.newsCard__flag{
-    background:url("../../images/bookmark-noraml.svg") no-repeat center;
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 24px;
-    right: 24px;
-    border-radius: 8px;
-    background-color: #ffffff;
+.newsCard__flag {
+  background: url("../../images/bookmark-noraml.svg") no-repeat center;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 24px;
+  right: 24px;
+  border-radius: 8px;
+  background-color: #ffffff;
 }
 
 .newsCard__tip {
-    display: none;
-    font-family: Roboto, sans-serif;
-    position: absolute;
-font-size: 12px;
-font-weight: 500;
-line-height: 14px;
+  display: none;
+  font-family: Roboto, sans-serif;
+  position: absolute;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
 
-text-align: center;
-background: #FFFFFF;
-box-shadow: 0px 10px 22px rgba(59, 74, 116, 0.1);
-border-radius: 10px;
-top: 24px;
-right: 69px;
-padding: 13px 20px;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0px 10px 22px rgba(59, 74, 116, 0.1);
+  border-radius: 10px;
+  top: 24px;
+  right: 69px;
+  padding: 13px 20px;
 }
-.newsCard__flag:hover + .newsCard__tip{
-    display: block;
+.newsCard__flag:hover + .newsCard__tip {
+  display: block;
 }
-.newsCard__textcontainer{
-padding: 20px 24px 24px;
-
+.newsCard__textcontainer {
+  padding: 20px 24px 24px;
 }
-.newsCard__trash{
-    background: url('../../images/trash-normal.svg') no-repeat center;
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 24px;
-    right: 24px;
-    border-radius: 8px;
-    background-color: #ffffff;
-}
-
-.newsCard__note{
-position: absolute;
-top: 24px;
-left: 24px;
-padding: 8px 22px;
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 24px;
-text-align: center;
-border-radius: 10px;
-color: #000000;
-background-color: #ffffff;
+.newsCard__trash {
+  background: url("../../images/trash-normal.svg") no-repeat center;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 24px;
+  right: 24px;
+  border-radius: 8px;
+  background-color: #ffffff;
 }
 
-.newsCard__trash:hover + .newsCard__tip{
-    display: block;
+.newsCard__note {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  padding: 8px 22px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 10px;
+  color: #000000;
+  background-color: #ffffff;
 }
 
-.newsCard__date{
-    color: #B6BCBF;
-    font-family: 'Source Sans Pro';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 24px;
-margin: 0;
+.newsCard__trash:hover + .newsCard__tip {
+  display: block;
 }
 
-.newsCard__title{
-    font-family: 'Roboto Slab';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 30px;
-    
-    color: #1A1B22;
-    padding: 12px 0 46px;
-    margin: 0;
+.newsCard__date {
+  color: #b6bcbf;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
 }
 
-.newsCard__text{
+.newsCard__title {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 30px;
 
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    padding-bottom: 40px;
-    color: #1A1B22;
-    margin: 0;
+  color: #1a1b22;
+  padding: 12px 0 46px;
+  margin: 0;
 }
 
-.newsCard__source{
-
-    font-family: 'Roboto Slab';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-    color: #B6BCBF;
-    margin: 0;
+.newsCard__text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  padding-bottom: 40px;
+  color: #1a1b22;
+  margin: 0;
 }
 
+.newsCard__source {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #b6bcbf;
+  margin: 0;
+  text-transform: uppercase;
+}

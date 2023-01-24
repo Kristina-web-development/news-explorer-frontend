@@ -19,7 +19,7 @@ export default function Header({
     return (
         <>
             {location.pathname === "/" ? (
-                <header className='app_header'>
+                <header className='header'>
                     <NavBar
                         isLoggedIn={isLoggedIn}
                         setIsSignInPopup={setIsSignInPopup}
@@ -28,13 +28,13 @@ export default function Header({
                         isSignUpPopup={isSignUpPopup}
                         isSignInPopup={isSignInPopup}
                     />
-                    <div className='header-content'>
-                        <h1 className='header-content-title'>What's going on in the world?</h1>
-                        <p className='header-content-subtitle'>Find the latest news on any topic and save them in your personal account.</p>
+                    <div className='header__content'>
+                        <h1 className='header__content-title'>What's going on in the world?</h1>
+                        <p className='header__content-subtitle'>Find the latest news on any topic and save them in your personal account.</p>
                         <SearchForm />
                     </div>
                 </header>) : (
-                <header className='app_header app_header-color_white' >
+                <header className='header header__color_white' >
                     <NavBar isLoggedIn={isLoggedIn} />
                     <SavedNewsHeader isLoggedIn={isLoggedIn} />
                 </header>

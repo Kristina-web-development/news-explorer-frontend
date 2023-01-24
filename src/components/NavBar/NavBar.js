@@ -28,61 +28,61 @@ export default function NavBar({ isLoggedIn,
     return (
         <>
             {location.pathname === "/" ?
-                <div className="header-navbar"
+                <nav className="header__navbar"
                     style={{
                         backgroundColor: screenWidth < 767 && toggleMenu ? isSignUpPopup || isSignInPopup ? null : "#1a1b22"
-                            : null, height: isSignUpPopup || isSignInPopup ? `${48 + 19 + 0.5}px` : null
+                            : null, height: isSignUpPopup || isSignInPopup ? `${48 + 19 + 0.5}px` : null,
+                        borderBottom: "0.5px solid #ffffff"
                     }}>
-                    {
-                        isSignUpPopup || isSignInPopup ? null : <>
-                            <div className="header-logo">NewsExplorer</div>
-                            <button className="header-menuBtn" onClick={() => setToggleMenu(!toggleMenu)}>
-                                <img src={toggleMenu ? closeBtn : hamburgerWhite} alt={toggleMenu ? "Close Button" : "Hamburger Button"} />
-                            </button>
-                            {(screenWidth > 767 || toggleMenu) &&
-                                <div className="header-navigation">
+                    {screenWidth < 767 && toggleMenu && isSignUpPopup || screenWidth < 767 && toggleMenu && isSignInPopup ? null : <>
+                        <div className="header__logo">NewsExplorer</div>
+                        <button className="header__menuBtn" onClick={() => setToggleMenu(!toggleMenu)}>
+                            <img src={toggleMenu ? closeBtn : hamburgerWhite} alt={toggleMenu ? "Close Button" : "Hamburger Button"} />
+                        </button>
+                        {(screenWidth > 767 || toggleMenu) &&
+                            <div className="header__navigation">
+                                <Link
+                                    to="/"
+                                    className="header__home-button header__home-button_active"
+                                    onClick={() => setToggleMenu(false)}
+                                >
+                                    Home
+                                </Link>
+                                {isLoggedIn ? <>
                                     <Link
-                                        to="/"
-                                        className="header-home-button header-home-button_active"
+                                        to="/saved-news"
+                                        className="header__saved-articles"
                                         onClick={() => setToggleMenu(false)}
                                     >
-                                        Home
+                                        Saved articles
                                     </Link>
-                                    {isLoggedIn ? <>
-                                        <Link
-                                            to="/saved-news"
-                                            className="header-saved-articles"
-                                            onClick={() => setToggleMenu(false)}
-                                        >
-                                            Saved articles
-                                        </Link>
-                                        <button className="header-logout" onClick={() => {
-                                            setLoggedIn(false)
-                                            setCurrentUser({})
-                                        }}>
-                                            <div className="header-logout__text">{currentUser.name}</div>
-                                            <div className="header-logout__icon" />
-                                        </button>
-                                    </> : <button className="header-login-button" onClick={() => setIsSignInPopup(true)}>Sign in</button>}
-                                </div>}
-
-                        </>
-                    }
-
-                </div>
+                                    <button className="header__logout" onClick={() => {
+                                        setLoggedIn(false)
+                                        setCurrentUser({})
+                                    }}>
+                                        <div className="header__logout-text">{currentUser.name}</div>
+                                        <div className="header__logout-icon" />
+                                    </button>
+                                </> : <button className="header__login-button" onClick={() => setIsSignInPopup(true)}>Sign in</button>}
+                            </div>}
+                    </>}
+                </nav>
                 :
-                <div className="header-navbar"
-                    style={{ backgroundColor: screenWidth < 767 && toggleMenu ? "#1a1b22" : null }}
+                <nav className="header__navbar"
+                    style={{
+                        backgroundColor: screenWidth < 767 && toggleMenu ? "#1a1b22" : null,
+                        borderBottom: "0.5px solid #777777"
+                    }}
                 >
-                    <div className={`header-logo ${toggleMenu ? null : "header-logo-color-black"}`}>NewsExplorer</div>
-                    <button className="header-menuBtn" onClick={() => setToggleMenu(!toggleMenu)}>
+                    <div className={`header__logo ${toggleMenu ? null : "header__logo-color_black"}`}>NewsExplorer</div>
+                    <button className="header__menuBtn" onClick={() => setToggleMenu(!toggleMenu)}>
                         <img src={toggleMenu ? closeBtn : hamburgerBlack} alt={toggleMenu ? "Close Button" : "Hamburger Button"} />
                     </button>
                     {(screenWidth > 767 || toggleMenu) &&
-                        <div className="header-navigation">
+                        <div className="header__navigation">
                             <Link
                                 to="/"
-                                className={`header-home-button ${toggleMenu ? null : "header-home-button-color-black"}`}
+                                className={`header__home-button ${toggleMenu ? null : "header__home-button-color_black"}`}
                                 onClick={() => setToggleMenu(false)}
                             >
                                 Home
@@ -90,17 +90,17 @@ export default function NavBar({ isLoggedIn,
                             {isLoggedIn && <>
                                 <Link
                                     to="/saved-news"
-                                    className={`header-saved-articles ${toggleMenu ? "header-home-button_active" : "header-saved-articles-black"}`}
+                                    className={`header__saved-articles ${toggleMenu ? "header__home-button_active" : "header__saved-articles_black"}`}
                                     onClick={() => setToggleMenu(false)}
                                 >
                                     Saved articles
                                 </Link>
-                                <button className={`header-logout ${toggleMenu ? null : "header-logout-black"}`}>
-                                    <div className="header-logout__text">{currentUser.name}</div>
-                                    <div className="header-logout__icon header-logout__icon-black" />
+                                <button className={`header__logout ${toggleMenu ? null : "header__logout-black"}`}>
+                                    <div className="header__logout-text">{currentUser.name}</div>
+                                    <div className="header__logout-icon header__logout-icon_black" />
                                 </button>
                             </>}
                         </div>}
-                </div>}
+                </nav>}
         </>)
 }

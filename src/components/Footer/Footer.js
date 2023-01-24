@@ -13,7 +13,7 @@ export default function Footer() {
                 </li>
                 <li className="footer__links-social">
                     <a href="https://github.com/Kristina-web-development" target="_blank" rel="noopener noreferrer" className="footer__link-social github"></a>
-                    <a href="" target="_blank" rel="noopener noreferrer" className="footer__link-social facebook"></a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="footer__link-social facebook"></a>
                 </li>
             </ul>
         </footer>

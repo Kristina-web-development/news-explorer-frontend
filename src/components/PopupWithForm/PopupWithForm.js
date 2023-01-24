@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function PopupWithForm({
     setIsSignInPopup,
@@ -102,7 +103,7 @@ export default function PopupWithForm({
                             </button>
                         </fieldset>
                     </form>
-                    <p className='popup__link'> or <span className='popup__link-span' onClick={onSpanClick}>{linkName}</span></p>
+                    <p className='popup__link'> or <Link to="/" className='popup__link-span' onClick={onSpanClick}>{linkName}</Link></p>
                 </div>
             </div>
         </section >

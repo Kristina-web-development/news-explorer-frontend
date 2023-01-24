@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import marked from '../../images/bookmark-active.svg'
+import hoverMark from '../../images/bookmark-black.svg'
+import regularMark from '../../images/bookmark-noraml.svg'
 // import CurrentUserContext from '../../context/CurrentUserContext';
 
 export default function NewsCard({ isLoggedIn }) {
+
+    const [hovered, setHovered] = useState(false)
+    const [isSave, setIsSave] = useState(false);
 
     let location = useLocation();
 
@@ -11,7 +17,14 @@ export default function NewsCard({ isLoggedIn }) {
             {!isLoggedIn ? (
                 <li className='newsCard'>
                     <div className='newsCard__image'></div>
-                    <div className='newsCard__flag'></div>
+                    <div className='newsCard__flag'
+                        style={{
+                            backgroundImage: isSave ? `url(${marked})` :
+                                hovered ? `url(${hoverMark})` : `url(${regularMark})`
+                        }}
+                        onMouseEnter={() => setHovered(true)}
+                        onMouseLeave={() => setHovered(false)}
+                    ></div>
                     <div className='newsCard__tip'>Sign in to save articles</div>
 
 
