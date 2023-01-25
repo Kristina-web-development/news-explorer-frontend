@@ -12,8 +12,8 @@ export default function Footer() {
                     <a href="https://practicum.yandex.com/" className="footer__links_link" rel="noopener noreferrer" target="_blank">Practicum</a>
                 </li>
                 <li className="footer__links_social">
-                    <a href="https://github.com/Kristina-web-development" target="_blank" rel="noopener noreferrer" className="footer__link_social github"></a>
-                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="footer__link_social facebook"></a>
+                    <a href="https://github.com/Kristina-web-development" target="_blank" rel="noopener noreferrer" className="footer__link_social github">{""}</a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="footer__link_social facebook">{""}</a>
                 </li>
             </ul>
         </footer>

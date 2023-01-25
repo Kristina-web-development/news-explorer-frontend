@@ -58,6 +58,7 @@ export default function EditProfilePopup({
             linkName="Sign up"
             disabledButtonClass={disabledButtonClass}
             disableButton={disableButton}
+            isValid={isValid}
 
         // isOpen={true}
         // isOpen={props.isOpen}

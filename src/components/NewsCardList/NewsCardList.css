@@ -2,20 +2,19 @@
   max-width: 1248px;
   width: 100%;
   padding: 64px 15px;
-  padding-top: 64px;
-  padding-bottom: 64px;
   margin: 0 auto;
-  /* background-color: aqua; */
 }
 
 .newsCards__backgroundColor_grey {
   background-color: #f5f6f7;
-  width: 100%;
+  width: 1440px;
+  margin: 0% auto;
+  padding: 64px 0;
 }
 
 .newsCards__list {
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
+  display: grid;
   gap: 16px;
   margin: 0 auto;
   margin-block-start: 0;
@@ -23,7 +22,31 @@
   padding-inline-start: 0;
 }
 
-@media screen and (max-width: 900px) {
+.newsCards__list_savedArticles {
+  width: 90%;
+}
+
+@media screen and (max-width: 1280px) {
+  .newsCards {
+    /* max-width: 300px; */
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .newsCards__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding-bottom: 0px;
+  }
+
+  /* .newsCards__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding-bottom: 0px;
+  } */
+}
+
+@media screen and (max-width: 1024px) {
   .newsCards {
     max-width: 696px;
     padding-top: 32px;
@@ -31,20 +54,23 @@
   }
 
   .newsCards__list {
+    grid-template-columns: repeat(2, 1fr);
     gap: 8px;
     padding-bottom: 0px;
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 810px) {
   .newsCards {
-    max-width: 288px;
+    max-width: 700px;
+    /* margin: 0% auto; */
+
     padding-top: 58px;
     padding-bottom: 21px;
   }
 
   .newsCards__list {
     grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
+    gap: 50px;
   }
 }

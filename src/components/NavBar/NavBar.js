@@ -17,6 +17,9 @@ export default function NavBar({ isLoggedIn,
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [toggleMenu, setToggleMenu] = useState(false);
 
+    const screenToogleSignUp = screenWidth < 450 && toggleMenu && isSignUpPopup
+    const screenToogleSignIn = screenWidth < 450 && toggleMenu && isSignInPopup
+
     useEffect(() => {
         const changeWidth = () => {
             setScreenWidth(window.innerWidth);
@@ -34,7 +37,7 @@ export default function NavBar({ isLoggedIn,
                             : null, height: isSignUpPopup || isSignInPopup ? `${48 + 19 + 0.5}px` : null,
                         borderBottom: "0.5px solid #ffffff"
                     }}>
-                    {screenWidth < 450 && toggleMenu && isSignUpPopup || screenWidth < 450 && toggleMenu && isSignInPopup ? null : <>
+                    {screenToogleSignUp || screenToogleSignIn ? null : <>
                         <div className="header__logo">NewsExplorer</div>
                         <button className="header__menuBtn" onClick={() => setToggleMenu(!toggleMenu)}>
                             <img src={toggleMenu ? closeBtn : hamburgerWhite} alt={toggleMenu ? "Close Button" : "Hamburger Button"} />

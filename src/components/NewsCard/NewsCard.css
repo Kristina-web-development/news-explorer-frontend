@@ -1,5 +1,5 @@
 .newsCard {
-  /* width: 400px; */
+  width: 400px;
   height: 576px;
   background: #ffffff;
   border: 0px solid #ffffff;
@@ -9,10 +9,18 @@
   align-items: center;
   position: relative;
   cursor: pointer;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 810px) {
+  .newsCard {
+    width: 500px;
+    margin: 0 auto;
+  }
 }
 .newsCard__image {
   background: url("../../images/lake-photo.png") no-repeat center;
-  /* width: 400px; */
+  width: 400px;
   width: 100%;
   height: 272px;
   background-size: cover;
@@ -68,7 +76,7 @@
   top: 24px;
   left: 24px;
   padding: 8px 22px;
-  font-family: "Roboto", sans-serif ;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;

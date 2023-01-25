@@ -13,6 +13,7 @@ export default function PopupWithForm({
     buttonText,
     children,
     submitError,
+    isValid
 
 
     // isOpen,
@@ -92,8 +93,14 @@ export default function PopupWithForm({
                         <fieldset className="popup__form_button_fieldset">
                             <button
                                 type="submit"
-                                className={`popup__form_button ${disabledButtonClass}`}
+                                className={`popup__form_button 
+                                // ${disabledButtonClass}
+                                `}
                                 disabled={disableButton}
+                                style={{
+                                    backgroundColor: isValid ? '#2F71E5' : '#E6E8EB',
+                                    color: isValid ? '#FFFFFF' : '#B6BCBF',
+                                }}
                             >
                                 {buttonText}
                             </button>
