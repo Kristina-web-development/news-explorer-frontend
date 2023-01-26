@@ -11,38 +11,56 @@ export default function NavBar({ isLoggedIn,
     setCurrentUser,
     isSignUpPopup,
     isSignInPopup }) {
+
     const currentUser = useContext(CurrentUserContext);
+
     let location = useLocation();
 
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [toggleMenu, setToggleMenu] = useState(false);
 
-    const screenToogleSignUp = screenWidth < 450 && toggleMenu && isSignUpPopup
-    const screenToogleSignIn = screenWidth < 450 && toggleMenu && isSignInPopup
+    const screenToogleSignUp = screenWidth < 756 && toggleMenu && isSignUpPopup
+    const screenToogleSignIn = screenWidth < 756 && toggleMenu && isSignInPopup
 
     useEffect(() => {
         const changeWidth = () => {
             setScreenWidth(window.innerWidth);
         };
 
-        window.addEventListener('resize', changeWidth);
+        window.addEventListener('resize', () => {
+            changeWidth()
+        });
     }, []);
+
+    useEffect(() => {
+        if (screenWidth > 756) {
+            console.log(`bigger`)
+            setToggleMenu(false)
+        }
+    }, [screenWidth])
 
     return (
         <>
             {location.pathname === "/" ?
-                <nav className="header__navbar"
+                <nav className={`header__navbar ${screenWidth < 756 && toggleMenu ?
+                    isSignUpPopup || isSignInPopup ?
+                        null : "header__navbar_backgroundcolor"
+                    : null} ${isSignUpPopup || isSignInPopup ? "header__navbar_heigth " : null}`}
                     style={{
-                        backgroundColor: screenWidth < 450 && toggleMenu ? isSignUpPopup || isSignInPopup ? null : "#1a1b22"
-                            : null, height: isSignUpPopup || isSignInPopup ? `${48 + 19 + 0.5}px` : null,
-                        borderBottom: "0.5px solid #ffffff"
+                        // backgroundColor:
+                        //     screenWidth < 756 && toggleMenu ?
+                        //         isSignUpPopup || isSignInPopup ?
+                        //             null : "#1a1b22"
+                        //         : null,
+                        // height: isSignUpPopup || isSignInPopup ? `${48 + 19 + 0.5}px` : null,
+                        // borderBottom: "0.5px solid #ffffff"
                     }}>
                     {screenToogleSignUp || screenToogleSignIn ? null : <>
                         <div className="header__logo">NewsExplorer</div>
-                        <button className="header__menuBtn" onClick={() => setToggleMenu(!toggleMenu)}>
+                        <button className="header__hamburger" onClick={() => setToggleMenu(!toggleMenu)}>
                             <img src={toggleMenu ? closeBtn : hamburgerWhite} alt={toggleMenu ? "Close Button" : "Hamburger Button"} />
                         </button>
-                        {(screenWidth > 450 || toggleMenu) &&
+                        {(screenWidth > 756 || toggleMenu) &&
                             <div className="header__navigation">
                                 <Link
                                     to="/"
@@ -71,17 +89,13 @@ export default function NavBar({ isLoggedIn,
                     </>}
                 </nav>
                 :
-                <nav className="header__navbar"
-                    style={{
-                        backgroundColor: screenWidth < 450 && toggleMenu ? "#1a1b22" : null,
-                        borderBottom: "0.5px solid #777777"
-                    }}
+                <nav className={`header__navbar ${screenWidth < 756 && toggleMenu && 'header__navbar_backgroundcolor'}`}
                 >
                     <div className={`header__logo ${toggleMenu ? null : "header__logo_color_black"}`}>NewsExplorer</div>
-                    <button className="header__menuBtn" onClick={() => setToggleMenu(!toggleMenu)}>
+                    <button className="header__hamburger" onClick={() => setToggleMenu(!toggleMenu)}>
                         <img src={toggleMenu ? closeBtn : hamburgerBlack} alt={toggleMenu ? "Close Button" : "Hamburger Button"} />
                     </button>
-                    {(screenWidth > 450 || toggleMenu) &&
+                    {(screenWidth > 756 || toggleMenu) &&
                         <div className="header__navigation">
                             <Link
                                 to="/"

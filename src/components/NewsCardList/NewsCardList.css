@@ -1,18 +1,18 @@
-.newsCards {
+.card-list {
   max-width: 1248px;
   width: 100%;
-  padding: 64px 15px;
+  /* padding: 64px 15px; */
   margin: 0 auto;
 }
 
-.newsCards__backgroundColor_grey {
+.card-list__backgroundcolor_grey {
   background-color: #f5f6f7;
-  width: 1440px;
+  max-width: 1440px;
   margin: 0% auto;
   padding: 64px 0;
 }
 
-.newsCards__list {
+.card-list__list {
   grid-template-columns: repeat(3, 1fr);
   display: grid;
   gap: 16px;
@@ -22,24 +22,25 @@
   padding-inline-start: 0;
 }
 
-.newsCards__list_savedArticles {
+.card-list__list_savedarticles {
   width: 90%;
 }
 
 @media screen and (max-width: 1280px) {
-  .newsCards {
+  .card-list {
     /* max-width: 300px; */
     padding-top: 32px;
     padding-bottom: 32px;
   }
 
-  .newsCards__list {
-    grid-template-columns: repeat(2, 1fr);
+  .card-list__list {
+    grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     padding-bottom: 0px;
+    margin:  auto;
   }
 
-  /* .newsCards__list {
+  /* .card-list__list {
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
     padding-bottom: 0px;
@@ -47,21 +48,21 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .newsCards {
-    max-width: 696px;
-    padding-top: 32px;
-    padding-bottom: 32px;
+  .card-list {
+    /* max-width: 696px; */
+    /* padding-top: 32px; */
+    /* padding-bottom: 32px; */
   }
 
-  .newsCards__list {
-    grid-template-columns: repeat(2, 1fr);
+  .card-list__list {
+    /* grid-template-columns: repeat(2, 1fr); */
     gap: 8px;
     padding-bottom: 0px;
   }
 }
 
 @media screen and (max-width: 810px) {
-  .newsCards {
+  .card-list {
     max-width: 700px;
     /* margin: 0% auto; */
 
@@ -69,8 +70,27 @@
     padding-bottom: 21px;
   }
 
-  .newsCards__list {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 50px;
+  .card-list__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
   }
 }
+
+@media screen and (max-width: 700px) {
+  .card-list {
+    max-width: 450px;
+    /* margin: 0% auto; */
+
+    padding-top: 58px;
+    padding-bottom: 21px;
+  }
+
+  .card-list__list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 8px;
+  }
+}
+
+
+
+

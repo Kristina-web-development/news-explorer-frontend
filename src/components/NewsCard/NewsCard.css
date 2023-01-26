@@ -1,5 +1,5 @@
-.newsCard {
-  width: 400px;
+.element {
+  /*width: 400px;*/
   height: 576px;
   background: #ffffff;
   border: 0px solid #ffffff;
@@ -11,14 +11,7 @@
   cursor: pointer;
   margin: 0 auto;
 }
-
-@media screen and (max-width: 810px) {
-  .newsCard {
-    width: 500px;
-    margin: 0 auto;
-  }
-}
-.newsCard__image {
+.element__image {
   background: url("../../images/lake-photo.png") no-repeat center;
   width: 400px;
   width: 100%;
@@ -27,7 +20,7 @@
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }
-.newsCard__flag {
+.element__flag {
   background: url("../../images/bookmark-noraml.svg") no-repeat center;
   position: absolute;
   width: 40px;
@@ -38,7 +31,7 @@
   background-color: #ffffff;
 }
 
-.newsCard__tip {
+.element__tip {
   display: none;
   font-family: "Roboto", sans-serif;
   position: absolute;
@@ -54,13 +47,13 @@
   right: 69px;
   padding: 13px 20px;
 }
-.newsCard__flag:hover + .newsCard__tip {
+.element__flag:hover + .element__tip {
   display: block;
 }
-.newsCard__textcontainer {
+.element__textcontainer {
   padding: 20px 24px 24px;
 }
-.newsCard__trash {
+.element__trash {
   background: url("../../images/trash-normal.svg") no-repeat center;
   position: absolute;
   width: 40px;
@@ -71,7 +64,7 @@
   background-color: #ffffff;
 }
 
-.newsCard__note {
+.element__note {
   position: absolute;
   top: 24px;
   left: 24px;
@@ -87,11 +80,11 @@
   background-color: #ffffff;
 }
 
-.newsCard__trash:hover + .newsCard__tip {
+.element__trash:hover + .element__tip {
   display: block;
 }
 
-.newsCard__date {
+.element__date {
   color: #b6bcbf;
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -101,19 +94,19 @@
   margin: 0;
 }
 
-.newsCard__title {
-  font-family: "Roboto Slab";
+.element__title {
+  font-family: "Roboto Slab", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 26px;
   line-height: 30px;
 
   color: #1a1b22;
-  padding: 12px 0 46px;
+  padding: 12px 0 16px;
   margin: 0;
 }
 
-.newsCard__text {
+.element__text {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -124,8 +117,8 @@
   margin: 0;
 }
 
-.newsCard__source {
-  font-family: "Roboto Slab";
+.element__source {
+  font-family: "Roboto Slab", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -133,4 +126,45 @@
   color: #b6bcbf;
   margin: 0;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 960px) {
+  .element {
+  
+    margin: 0 auto;
+  }
+
+  .element__textcontainer {
+   padding: 16px;
+  }
+  .element__text {
+    padding-bottom: 12px;
+  }
+  
+
+  
+}
+@media screen and (max-width: 760px) {
+  .element {
+    /* width: 500px; */
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 550px) {
+  .element {
+    width: 350px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 365px) {
+  .element {
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 320px) {
+  .element {
+    width: 288px;
+    margin: 0 auto;
+  }
 }

@@ -1,15 +1,12 @@
 import React from 'react';
-// import NavBar from '../NavBar/NavBar';
 
-export default function SavedNewsHeader({ isLoggedIn }) {
+export default function SavedNewsHeader() {
     return (
-
-        <header className='savedNews__header'>
-            {/* <NavBar isLoggedIn={isLoggedIn} /> */}
-            <div className='savedNews__text_container'>
-                <p className='savedNews__subtitle'>Saved articles</p>
-                <h1 className='savedNews__title'>Kris, you have 5 saved articles</h1>
-                <p className='savedNews__keywords'>By keywords: <span>Nature, Yellowstone, and 2 other</span></p>
+        <header className='news__container__header'>
+            <div className='news__container__text_container'>
+                <p className='news__container__subtitle'>Saved articles</p>
+                <h1 className='news__container__title'>Kris, you have 5 saved articles</h1>
+                <p className='news__container__keywords'>By keywords: <span>Nature, Yellowstone, and 2 other</span></p>
             </div>
         </header>
 

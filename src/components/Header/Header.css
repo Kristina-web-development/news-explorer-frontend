@@ -8,7 +8,7 @@
   background: #ffffff;
 }
 .header__content_title {
-  font-family: Roboto Slab, sans-serif;
+  font-family: "Roboto Slab", sans-serif;
   font-size: 60px;
   line-height: 64px;
   padding-left: 0;
@@ -29,7 +29,7 @@
 }
 
 .header__content_subtitle {
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   line-height: 24px;
   padding-top: 32px;
@@ -135,10 +135,22 @@
   }
 
   .header__content_title {
-    max-width: 285px;
+    max-width: 452px;
     padding-top: 30px;
     font-size: 36px;
     line-height: 40px;
+  }
+
+  .header__content_subtitle {
+    max-width: 452px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  
+  .header__content_title {
+    max-width: 288px;
+  
   }
 
   .header__content_subtitle {

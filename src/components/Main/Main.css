@@ -31,7 +31,7 @@
 }
 
 .main__button {
-  margin: 0;
+  margin: 3% 0%;
   visibility: visible;
   opacity: 1;
   width: 288px;
@@ -44,10 +44,11 @@
   line-height: 24px;
   color: #1a1b22;
   border: none;
-  padding-top: 20px;
-  padding-left: 99px;
-  padding-bottom: 20px;
-  padding-right: 98px;
+  padding: 20px 98px;
+  /* padding-top: 20px; */
+  /* padding-left: 99px; */
+  /* padding-bottom: 20px; */
+  /* padding-right: 98px; */
   cursor: pointer;
   transition: 0.3s linear;
 }
@@ -74,10 +75,11 @@
 
   .main__button {
     width: 240px;
-    padding-top: 16px;
+    padding: 16px 74px;
+    /* padding-top: 16px;
     padding-left: 75px;
     padding-bottom: 16px;
-    padding-right: 74px;
+    padding-right: 74px; */
   }
 }
 
@@ -89,15 +91,16 @@
   }
 
   .main__news_container {
-    max-width: 288px;
+    /* max-width: 288px; */
     padding-bottom: 24px;
   }
 
   .main__button {
     width: 288px;
-    padding-top: 16px;
-    padding-left: 99px;
-    padding-bottom: 16px;
-    padding-right: 98px;
+    padding: 16px 98px;
+    /* padding-top: 16px; */
+    /* padding-left: 99px; */
+    /* padding-bottom: 16px; */
+    /* padding-right: 98px; */
   }
 }

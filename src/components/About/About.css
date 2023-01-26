@@ -55,8 +55,7 @@
   .about {
     max-width: 768px;
     gap: 32px;
-    padding-top: 61px;
-    padding-bottom: 61px;
+    padding: 40px;
   }
 
   .about__author_picture {

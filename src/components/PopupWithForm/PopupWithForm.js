@@ -80,8 +80,8 @@ export default function PopupWithForm({
                 <div className={`popup__form_container`}>
                     <h2 className={`popup__header`}>{title}</h2>
                     <form
-                        className={`popup__form ${name}__form`}
-                        name={`${name}`}
+                        className={`popup__form `}
+                        name={name}
                         onSubmit={onSubmit}
                     >
                         {children}

@@ -5,6 +5,15 @@
   width: 100%;
   padding-top: 19px;
   padding-bottom: 0px;
+  border-bottom: 0.5px solid #777777;
+}
+
+.header__navbar_backgroundcolor {
+  background-color: #1a1b22;
+}
+
+.header__navbar_heigth {
+  height: calc(48px + 19px + 0.5px);
 }
 
 .header__logo {
@@ -23,7 +32,10 @@
   transition: 0.3s linear;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 756px) {
+  /* .header__navbar {
+
+  } */
   .header__logo {
     padding: 11px 0px 13px 15px;
   }
@@ -40,7 +52,7 @@
   padding-right: 104px;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 756px) {
   .header__navigation {
     width: 100%;
     padding-right: 10px;
@@ -81,7 +93,7 @@
   border-bottom: 3px solid #ffffff;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 756px) {
   .header__home_button_active {
     border: none;
     margin: 0% 0% 7% 3%;
@@ -105,7 +117,7 @@
   padding: 12px;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 756px) {
   .header__login_button {
     width: 95%;
     margin: 0% auto;
@@ -148,7 +160,7 @@
   color: #ffffff;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 756px) {
   .header__logout {
     width: 95%;
     margin: 0% auto;
@@ -188,7 +200,7 @@
   background: url("../../images/logout.svg") no-repeat center;
 }
 
-.header__menuBtn {
+.header__hamburger {
   display: none;
   background: none;
   border: none;
@@ -199,12 +211,12 @@
   align-items: center;
 }
 
-@media (max-width: 450px) {
-  .header__menuBtn {
+@media (max-width: 756px) {
+  .header__hamburger {
     display: flex;
   }
 }
 
-.header__menuBtn img {
+.header__hamburger img {
   width: 24px;
 }

@@ -8,8 +8,8 @@ export default function NewsCardsList({ isLoggedIn, isSavedCategory = false }) {
     let location = useLocation();
 
     return (
-        <section className={` ${location.pathname == "/" ? "newsCards" : "newsCards__backgroundColor_grey"}`}>
-            <ul className={`newsCards__list ${location.pathname !== "/" && "newsCards__list_savedArticles"}`}>
+        <section className={` ${location.pathname === "/" ? "card-list" : "card-list__backgroundcolor_grey"}`}>
+            <ul className={`card-list__list ${location.pathname !== "/" && "card-list__list_savedarticles"}`}>
                 <NewsCard isLoggedIn={isLoggedIn} />
                 <NewsCard isLoggedIn={isLoggedIn} />
                 <NewsCard isLoggedIn={isLoggedIn} />
