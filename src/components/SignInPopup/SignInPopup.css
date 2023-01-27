@@ -1,79 +1,84 @@
-.signin__form_fieldset {
+.signin-form__fieldset {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.signin-form__input:focus {
+  outline-color: rgb(28, 104, 175);
+  outline-style: solid;
+  outline-width: 3px;
+  border-radius: 1px;
+  box-shadow: 0 0 3px 3px rgb(28, 104, 175);
+}
+
+.signin-form__lable {
+  margin: 0;
+  padding-top: 22px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #2f71e5;
+}
+
+.signin-form__input {
+  margin-top: 9px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: left;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  width: 358px;
+}
+
+.signin-form__input:active {
+  border-bottom: 1px solid black;
+}
+
+.form__input_type_error {
+  border-bottom: 1px solid red;
+  opacity: 1;
+}
+
+.form__input-error {
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.form__input-error_active {
+  visibility: visible;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ff0000;
+}
+
+@media screen and (max-width: 600px) {
+  .signin-form__lable {
     padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    border: none;
   }
 
-  .signin__form_lable{
-    margin: 0;
-    padding-top: 22px;
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    color: #2F71E5;
-  }
-  
-  .signin__form_input {
-    margin-top: 9px;
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 17px;
-    text-align: left;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    width: 358px;
-  }
-
-  .signin__form_input:active{
-    border-bottom: 1px solid black;
-  }
-  
-  .form__input_type_error {
-    border-bottom: 1px solid red;
-    opacity: 1;
-  }
-
-  .form__input_error{
-    visibility: hidden;
-    margin: 0;
+  .signin-form__lable_email {
     padding: 0;
   }
-  
-  .form__input_error_active {
-   visibility: visible;
-   font-family: "Inter", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    color: #ff0000;
+
+  .signin-form__lable_password {
+    padding-top: 30px;
   }
-   
 
-  @media screen and (max-width: 600px) {
-
-    .signin__form_lable{
-      padding: 0;
-    }
-
-    .signin__form_lable_email{
-     padding: 0;
-    }
-
-    .signin__form_lable_password{
-     padding-top: 30px;
-    }
-  
-    .signin__form_input {
-      width: 100%;
-    }
-  
+  .signin-form__input {
+    width: 100%;
   }
+}

@@ -1,15 +1,22 @@
 import React from "react";
 
 export default function SearchForm() {
-
-    return (
-        <form className="header__search_form" name="header__search_form">
-            <fieldset className="header__search_form_fieldset">
-                <input type="text" className="header__search_form_input " id="text" name="text" placeholder="Yellowstone" required
-                // value=""
-                ></input>
-                <button type="submit" className="header__search_form_button">Search</button>
-            </fieldset>
-        </form>
-    )
+  return (
+    <form className="search-form" name="search-form">
+      <fieldset className="search-form__fieldset">
+        <input
+          type="text"
+          className="search-form__input "
+          id="text"
+          name="text"
+          placeholder="Enter topic"
+          required
+          // value=""
+        ></input>
+        <button type="submit" className="search-form__button">
+          Search
+        </button>
+      </fieldset>
+    </form>
+  );
 }

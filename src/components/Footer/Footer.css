@@ -28,16 +28,16 @@
   gap: 40px;
 }
 
-.footer__links_featured {
+.footer__links-featured {
   text-decoration: none;
   transition: 0.3s linear;
   display: flex;
   gap: 40px;
 }
-.footer__links_featured:hover {
+.footer__links-featured:hover {
   opacity: 0.8;
 }
-.footer__links_link {
+.footer__links-link {
   margin: 0;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
@@ -48,17 +48,17 @@
   color: #1a1b22;
 }
 
-.footer__links_social {
+.footer__links-social {
   display: flex;
   gap: 26.89px;
   transition: 0.3s linear;
 }
 
-.footer__links_social:hover {
+.footer__links-social:hover {
   opacity: 0.8;
 }
 
-.footer__link_social {
+.footer__link-social {
   margin: 0;
   width: 24px;
   height: 24px;
@@ -85,7 +85,7 @@
   .footer__links {
     padding-top: 21px;
     padding-bottom: 19px;
-    padding-right: 21px;
+    padding-right: 40px;
   }
 
   .facebook {
@@ -115,11 +115,11 @@
     justify-content: space-between;
   }
 
-  .footer__links_featured {
+  .footer__links-featured {
     flex-direction: column;
   }
 
-  .footer__links_social {
+  .footer__links-social {
     gap: 25px;
   }
 

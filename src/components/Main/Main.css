@@ -16,11 +16,11 @@
   font-weight: 400;
   font-size: 40px;
   line-height: 46px;
-  padding-left: 80px;
-  padding-top: 104px;
+  padding-left: 104px;
+  padding-top: 80px;
 }
 
-.main__news_container {
+.main__news-container {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -28,6 +28,7 @@
   align-items: center;
   padding-bottom: 40px;
   max-width: 1248px;
+  padding-top: 64px;
 }
 
 .main__button {
@@ -69,8 +70,9 @@
     line-height: 34px;
   }
 
-  .main__news_container {
+  .main__news-container {
     max-width: 696px;
+    padding-top: 0;
   }
 
   .main__button {
@@ -90,7 +92,7 @@
     margin: 0 auto;
   }
 
-  .main__news_container {
+  .main__news-container {
     /* max-width: 288px; */
     padding-bottom: 24px;
   }

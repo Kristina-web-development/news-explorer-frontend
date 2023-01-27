@@ -1,4 +1,4 @@
-.news__container__header {
+.news__header {
   font-family: "Roboto", sans-serif;
   max-width: 1440px;
   position: relative;
@@ -6,12 +6,12 @@
   background: #ffffff;
 }
 
-.news__container__text-container {
+.news__container-text {
   width: 85%;
   margin: 0% auto;
 }
 
-.news__container__keywords {
+.news__container-keywords {
   max-width: 712px;
   height: 24px;
   font-family: "Roboto", sans-serif;
@@ -23,11 +23,11 @@
   margin: 0;
 }
 
-.news__container__keywords span {
+.news__container-keywords span {
   font-weight: 700;
 }
 
-.news__container__title {
+.news__container-title {
   max-width: 530px;
   height: 92px;
   font-family: "Roboto Slab", sans-serif;
@@ -39,7 +39,7 @@
   padding-bottom: 30px;
 }
 
-.news__container__subtitle {
+.news__container-subtitle {
   max-width: 712px;
   height: 24px;
   color: rgba(26, 27, 34, 0.5);
@@ -51,36 +51,40 @@
 }
 
 @media screen and (max-width: 768px) {
-  .news__container__title {
+  .news__container-title {
     width: 320px;
     height: 68px;
     font-size: 30px;
     line-height: 34px;
   }
 
-  .news__container__subtitle {
+  .news__container-subtitle {
     height: 24px;
     font-style: normal;
     font-size: 14px;
   }
+
+  .news__container-keywords {
+    padding-bottom: 32px;
+  }
 }
 
 @media screen and (max-width: 320px) {
-  .news__container__title {
+  .news__container-title {
     width: 288px;
     height: 68px;
     font-size: 30px;
     line-height: 34px;
   }
 
-  .news__container__subtitle {
+  .news__container-subtitle {
     width: 288px;
     height: 24px;
     font-size: 14px;
     font-size: 12px;
   }
 
-  .news__container__keywords {
+  .news__container-keywords {
     width: 288px;
     height: 48px;
   }
