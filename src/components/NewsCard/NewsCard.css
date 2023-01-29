@@ -128,21 +128,22 @@
   text-transform: uppercase;
 }
 
+.element__source a {
+  text-decoration: none;
+  color: #b6bcbf;
+}
+
 @media screen and (max-width: 960px) {
   .element {
-  
     margin: 0 auto;
   }
 
   .element__textcontainer {
-   padding: 16px;
+    padding: 16px;
   }
   .element__text {
     padding-bottom: 12px;
   }
-  
-
-  
 }
 @media screen and (max-width: 760px) {
   .element {

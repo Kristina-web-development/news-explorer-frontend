@@ -19,3 +19,6 @@ body {
 @import url("./components/Main/Main.css");
 @import url("./components/SearchForm/SearchForm.css");
 @import url("./components//SavedNews/SavedNews.css");
+@import url("./components/PopupConfirm/PopupConfirm.css");
+@import url("./components/Preloader/Preloader.css");
+@import url("./components/NothingFound/NothingFound.css");

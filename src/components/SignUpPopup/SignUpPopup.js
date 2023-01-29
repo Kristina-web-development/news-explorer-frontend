@@ -32,9 +32,10 @@ export default function EditProfilePopup(props) {
 
     function handleSubmit(e) {
         e.preventDefault();
-        props.setRegUsers((users) => [...users, values])
-        props.setIsSignUpPopup(false)
-        props.setIsSignInPopup(true)
+        props.signup(values)
+        // props.setRegUsers((users) => [...users, values])
+        // props.setIsSignUpPopup(false)
+        // props.setIsSignInPopup(true)
         // props.onSignup(values);
         // console.log(values)
     }
@@ -49,7 +50,16 @@ export default function EditProfilePopup(props) {
             linkName="Sign in"
             disabledButtonClass={disabledButtonClass}
             disableButton={disableButton}
-            isValid={isValid}
+        // setIsSignInPopup={props.setIsSignInPopup}
+        // setIsSignUpPopup={props.setIsSignUpPopup}
+        // name="signup"
+        // title="Sign up"
+        // buttonText="Sign up"
+        // onSubmit={handleSubmit}
+        // linkName="Sign in"
+        // disabledButtonClass={disabledButtonClass}
+        // disableButton={disableButton}
+        // isValid={isValid}
 
         // isOpen={true}
         // isOpen={props.isOpen}

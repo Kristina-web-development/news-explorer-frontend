@@ -11,7 +11,19 @@ export default function Header({
     setLoggedIn,
     setCurrentUser,
     isSignUpPopup,
-    isSignInPopup
+    isSignInPopup,
+    logout,
+    setArticles,
+    setIsLoading,
+    setSearchQuestion,
+    keywords,
+    articles
+    // isLoggedIn,
+    // setIsSignInPopup,
+    // setLoggedIn,
+    // setCurrentUser,
+    // isSignUpPopup,
+    // isSignInPopup
 }) {
     // const currentUser = React.useContext(CurrentUserContext);
     let location = useLocation();
@@ -27,16 +39,35 @@ export default function Header({
                         setLoggedIn={setLoggedIn}
                         isSignUpPopup={isSignUpPopup}
                         isSignInPopup={isSignInPopup}
+                        logout={logout}
+                    // isLoggedIn={isLoggedIn}
+                    // setIsSignInPopup={setIsSignInPopup}
+                    // setCurrentUser={setCurrentUser}
+                    // setLoggedIn={setLoggedIn}
+                    // isSignUpPopup={isSignUpPopup}
+                    // isSignInPopup={isSignInPopup}
                     />
                     <div className='header__content'>
                         <h1 className='header__content_title'>What's going on in the world?</h1>
                         <p className='header__content_subtitle'>Find the latest news on any topic and save them in your personal account.</p>
-                        <SearchForm />
+                        <SearchForm
+                            setArticles={setArticles}
+                            setIsLoading={setIsLoading}
+                            setSearchQuestion={setSearchQuestion} />
                     </div>
                 </header>) : (
                 <header className='header header__color_white' >
-                    <NavBar isLoggedIn={isLoggedIn} />
-                    <SavedNewsHeader isLoggedIn={isLoggedIn} />
+                    <NavBar
+                        isLoggedIn={isLoggedIn}
+                        logout={logout}
+                    // isLoggedIn={isLoggedIn}
+                    />
+                    <SavedNewsHeader
+                        isLoggedIn={isLoggedIn}
+                        keywords={keywords}
+                        articles={articles}
+                    // isLoggedIn={isLoggedIn}
+                    />
                 </header>
 
             )}

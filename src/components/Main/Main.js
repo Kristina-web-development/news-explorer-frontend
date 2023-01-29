@@ -5,8 +5,12 @@ import About from "../About/About";
 import NewsCardsList from "../NewsCardList/NewsCardList";
 import SignInPopup from "../SignInPopup/SignInPopup"
 import SignUpPopup from "../SignUpPopup/SignUpPopup"
+import PopupConfirm from "../PopupConfirm/PopupConfirm";
+import Preloader from '../Preloader/Preloader';
+import NothingFound from "../NothingFound/NothingFound";
 
-export default function Main({ isLoggedIn,
+export default function Main({
+    isLoggedIn,
     isSignInPopup,
     isSignUpPopup,
     setIsSignInPopup,
@@ -14,24 +18,30 @@ export default function Main({ isLoggedIn,
     setLoggedIn,
     setCurrentUser,
     regUsers,
-    setRegUsers
+    setRegUsers,
+    errorText,
+    signup,
+    signin,
+    articles,
+    isConfirmPopup,
+    setIsConfirmPopup,
+    searchQuestion,
+    isLoading,
+    setKeywords,
+    setSavedArticles,
+    savedArticles,
 }) {
 
-    // const [isPopUpOpen, setisPopupOpen] = useState(false);
-    // const [isSignInPopup, setIsSignInPopup] = useState(false);
-
-    console.log(regUsers)
+    // console.log(setIsSignUpPopup)
     return (
         <main className='main'>
             {
                 isSignUpPopup && <SignUpPopup
                     setIsSignInPopup={setIsSignInPopup}
                     setIsSignUpPopup={setIsSignUpPopup}
-
+                    errorText={errorText}
+                    signup={signup}
                     setRegUsers={setRegUsers}
-                // setLoggedIn={setLoggedIn}
-                // setCurrentUser={setCurrentUser}
-                // isOpen={true} 
                 />
             }
             {
@@ -41,19 +51,44 @@ export default function Main({ isLoggedIn,
                     regUsers={regUsers}
                     setLoggedIn={setLoggedIn}
                     setCurrentUser={setCurrentUser}
-                // isOpen={true} 
-                // isOpen={isPopUpOpen}
+                    signin={signin}
+                    errorText={errorText}
                 />
             }
-            {/* {isPopUpOpen && isSignInPopup ? <SignInPopup isOpen={isPopUpOpen} /> : <SignUpPopup />}
-             */}
+            <PopupConfirm
+                name="confirm"
+                setIsSignInPopup={setIsSignInPopup}
+                setIsSignUpPopup={setIsSignUpPopup}
+                isOpen={isConfirmPopup}
+                setIsConfirmPopup={setIsConfirmPopup}
+            />
             <div className='main__container'>
-                <h2 className='main__header'>Search results</h2>
-                <div className='main__news_container'>
-                    <NewsCardsList isLoggedIn={isLoggedIn} />
-
-                    <button type='button' className="main__button">Show more</button>
-                </div>
+                {
+                    articles.length > 0 ?
+                        <>
+                            <div className='main__news_container'>
+                                {/* <h2 className='main__header'>Search results</h2> */}
+                                {isLoading && searchQuestion && <Preloader />}
+                                <NewsCardsList
+                                    articles={articles}
+                                    isLoggedIn={isLoggedIn}
+                                    searchQuestion={searchQuestion}
+                                    isLoading={isLoading}
+                                    savedArticles={savedArticles}
+                                    setSavedArticles={setSavedArticles}
+                                    setIsSignUpPopup={setIsSignUpPopup}
+                                    setKeywords={setKeywords}
+                                />
+                            </div>
+                        </> :
+                        (
+                            !isLoading && searchQuestion ? <NothingFound
+                                articles={articles}
+                                searchQuestion={searchQuestion}
+                                isLoading={isLoading}
+                            /> : isLoading && searchQuestion ? <Preloader /> : null
+                        )
+                }
             </div>
             <About />
         </main>

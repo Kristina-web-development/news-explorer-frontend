@@ -6,7 +6,14 @@ export default function EditProfilePopup({
     setIsSignUpPopup,
     setLoggedIn,
     regUsers,
-    setCurrentUser
+    setCurrentUser,
+    errorText,
+    signin
+    // setIsSignInPopup,
+    // setIsSignUpPopup,
+    // setLoggedIn,
+    // regUsers,
+    // setCurrentUser
 }) {
     const [values, setValues] = useState({ email: '', password: '' });
     const [errors, setErrors] = useState({ email: '', password: '' });
@@ -38,11 +45,12 @@ export default function EditProfilePopup({
 
     function handleSubmit(e) {
         e.preventDefault();
-        const user = regUsers.find(user => user.email.toLowerCase() === values.email.toLowerCase() && user.password === values.password)
-        setLoggedIn(true)
-        setCurrentUser(user)
-        setIsSignInPopup(false)
-        setIsSignUpPopup(false)
+        signin(values)
+        // const user = regUsers.find(user => user.email.toLowerCase() === values.email.toLowerCase() && user.password === values.password)
+        // setLoggedIn(true)
+        // setCurrentUser(user)
+        // setIsSignInPopup(false)
+        // setIsSignUpPopup(false)
 
         // props.onSignin(values);
     }
@@ -58,7 +66,16 @@ export default function EditProfilePopup({
             linkName="Sign up"
             disabledButtonClass={disabledButtonClass}
             disableButton={disableButton}
-            isValid={isValid}
+        // setIsSignInPopup={setIsSignInPopup}
+        // setIsSignUpPopup={setIsSignUpPopup}
+        // name="signin"
+        // title="Sign in"
+        // buttonText="Sign in"
+        // onSubmit={handleSubmit}
+        // linkName="Sign up"
+        // disabledButtonClass={disabledButtonClass}
+        // disableButton={disableButton}
+        // isValid={isValid}
 
         // isOpen={true}
         // isOpen={props.isOpen}

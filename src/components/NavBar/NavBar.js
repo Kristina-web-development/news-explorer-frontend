@@ -5,12 +5,18 @@ import closeBtn from '../../images/Close_Icon.svg'
 import hamburgerBlack from '../../images/hamburger_black.svg'
 import hamburgerWhite from '../../images/hamburger.svg'
 
-export default function NavBar({ isLoggedIn,
+export default function NavBar({
+    isLoggedIn,
     setIsSignInPopup,
-    setLoggedIn,
-    setCurrentUser,
     isSignUpPopup,
-    isSignInPopup }) {
+    isSignInPopup,
+    logout
+    // setIsSignInPopup,
+    // setLoggedIn,
+    // setCurrentUser,
+    // isSignUpPopup,
+    // isSignInPopup
+}) {
 
     const currentUser = useContext(CurrentUserContext);
 
@@ -34,7 +40,7 @@ export default function NavBar({ isLoggedIn,
 
     useEffect(() => {
         if (screenWidth > 756) {
-            console.log(`bigger`)
+            // console.log(`bigger`)
             setToggleMenu(false)
         }
     }, [screenWidth])
@@ -77,10 +83,13 @@ export default function NavBar({ isLoggedIn,
                                     >
                                         Saved articles
                                     </Link>
-                                    <button className="header__logout" onClick={() => {
-                                        setLoggedIn(false)
-                                        setCurrentUser({})
-                                    }}>
+                                    <button className="header__logout"
+                                        onClick={logout}
+                                    // onClick={() => {
+                                    //     setLoggedIn(false)
+                                    //     setCurrentUser({})
+                                    // }}
+                                    >
                                         <div className="header__logout_text">{currentUser.name}</div>
                                         <div className="header__logout_icon" />
                                     </button>
@@ -112,7 +121,8 @@ export default function NavBar({ isLoggedIn,
                                 >
                                     Saved articles
                                 </Link>
-                                <button className={`header__logout ${toggleMenu ? null : "header__logout_black"}`}>
+                                <button onClick={logout}
+                                    className={`header__logout ${toggleMenu ? null : "header__logout_black"}`}>
                                     <div className="header__logout_text">{currentUser.name}</div>
                                     <div className="header__logout_icon header__logout_icon_black" />
                                 </button>
