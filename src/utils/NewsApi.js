@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:3001';
+export const BASE_URL = 'https://api.kristinastasevich.students.nomoredomainssbs.ru';
 
 const customFetch = (url, headers) => {
   return fetch(url, headers).then((res) =>
