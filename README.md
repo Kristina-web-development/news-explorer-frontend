@@ -8,3 +8,4 @@ https://github.com/Kristina-web-development/news-explorer-frontend
 
 live:
 https://kristinastasevich.students.nomoredomainssbs.ru
+ 

@@ -8,6 +8,7 @@ import Main from "../Main/Main";
 //import SavedNewsHeader from "../SavedNewsHeader/SavedNewsHeader";
 import SavedNews from "../SavedNews/SavedNews";
 import * as auth from "../../utils/auth";
+import ProtectedRoute from "../Protected/ProtectedRoute";
 
 export default function App() {
     const [isSignUpPopup, setIsSignUpPopup] = useState(false);
@@ -154,12 +155,15 @@ export default function App() {
                         // signin={signin}
                         />} />
                     <Route path='saved-news' element={
-                        <SavedNews
-                            isLoggedIn={isLoggedIn}
-                            setKeywords={setKeywords}
-                            setSavedArticles={setSavedArticles}
-                            savedArticles={savedArticles}
-                        />} />
+                        <ProtectedRoute isLogin={isLoggedIn} setIsSignUpPopup={setIsSignInPopup}>
+                            <SavedNews
+                                isLoggedIn={isLoggedIn}
+                                setKeywords={setKeywords}
+                                setSavedArticles={setSavedArticles}
+                                savedArticles={savedArticles}
+                            />
+                        </ProtectedRoute>
+                    } />
                 </Routes>
                 <Footer />
             </CurrentUserContext.Provider>

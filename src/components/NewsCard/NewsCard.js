@@ -169,7 +169,7 @@ export default function NewsCard({
                         // }}
                         onMouseEnter={() => setHovered(true)}
                         onMouseLeave={() => setHovered(false)}
-                        onClick={location.pathname === "/" ? handleDeleteClick : deleteCard}
+                        onClick={location.pathname === "/" ? handleDeleteClick : () => deleteCard(article)}
                     // onClick={() => setIsSave(!isSave)}
                     ></div>
                     {location.pathname === "/" ? null :

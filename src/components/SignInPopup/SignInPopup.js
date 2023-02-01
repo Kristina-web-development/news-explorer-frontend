@@ -66,16 +66,16 @@ export default function EditProfilePopup({
             linkName="Sign up"
             disabledButtonClass={disabledButtonClass}
             disableButton={disableButton}
-        // setIsSignInPopup={setIsSignInPopup}
-        // setIsSignUpPopup={setIsSignUpPopup}
-        // name="signin"
-        // title="Sign in"
-        // buttonText="Sign in"
-        // onSubmit={handleSubmit}
-        // linkName="Sign up"
-        // disabledButtonClass={disabledButtonClass}
-        // disableButton={disableButton}
-        // isValid={isValid}
+            // setIsSignInPopup={setIsSignInPopup}
+            // setIsSignUpPopup={setIsSignUpPopup}
+            // name="signin"
+            // title="Sign in"
+            // buttonText="Sign in"
+            // onSubmit={handleSubmit}
+            // linkName="Sign up"
+            // disabledButtonClass={disabledButtonClass}
+            // disableButton={disableButton}
+            isValid={isValid}
 
         // isOpen={true}
         // isOpen={props.isOpen}
