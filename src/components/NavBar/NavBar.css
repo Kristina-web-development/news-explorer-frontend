@@ -1,0 +1,222 @@
+.header__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 19px;
+  padding-bottom: 0px;
+  border-bottom: 0.5px solid #777777;
+}
+
+.header__navbar_backgroundcolor {
+  background-color: #1a1b22;
+}
+
+.header__navbar_heigth {
+  height: calc(48px + 19px + 0.5px);
+}
+
+.header__logo {
+  margin: 0;
+  font-family: "Roboto Slab", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  padding-top: 11px;
+  padding-left: 54px;
+  padding-bottom: 13px;
+  max-width: 200px;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+@media (max-width: 756px) {
+  /* .header__navbar {
+
+  } */
+  .header__logo {
+    padding: 11px 0px 13px 15px;
+  }
+}
+
+.header__logo:hover {
+  opacity: 0.8;
+}
+
+.header__navigation {
+  display: flex;
+  justify-content: flex-end;
+  gap: 42px;
+  padding-right: 104px;
+}
+
+@media (max-width: 756px) {
+  .header__navigation {
+    width: 100%;
+    padding-right: 10px;
+    background-color: #1a1b22;
+    flex-direction: column;
+    align-items: stretch;
+    position: absolute;
+    top: calc(48px + 19px + 0.5px);
+    padding: 10% 0%;
+    z-index: 10;
+  }
+}
+
+.header__home_button {
+  background: none;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  cursor: pointer;
+  padding-top: 11px;
+  padding-bottom: 17px;
+  margin-bottom: 0;
+  text-decoration: none;
+  color: #b6bcbf;
+  transition: 0.3s linear;
+  max-width: 68px;
+  text-align: center;
+}
+
+.header__home_button:hover {
+  color: #ffffff;
+}
+
+.header__home_button_active {
+  color: #ffffff;
+  border-bottom: 3px solid #ffffff;
+}
+
+@media (max-width: 756px) {
+  .header__home_button_active {
+    border: none;
+    margin: 0% 0% 7% 3%;
+    font-size: 20px;
+  }
+}
+
+.header__login_button {
+  background: none;
+  width: 152px;
+  height: 48px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  border: 1px solid #d1d2d6;
+  border-radius: 100px;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 12px;
+}
+
+@media (max-width: 756px) {
+  .header__login_button {
+    width: 95%;
+    margin: 0% auto;
+    font-size: 20px;
+  }
+}
+
+.header__saved_articles {
+  background: none;
+  height: 48px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 12px 0px 12px 0px;
+  text-decoration: none;
+}
+
+.header__logout {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  background: none;
+  border-radius: 100px;
+  cursor: pointer;
+  height: 48px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 19px;
+  padding-right: 7px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+@media (max-width: 756px) {
+  .header__logout {
+    width: 95%;
+    margin: 0% auto;
+    font-size: 20px;
+    justify-content: center;
+  }
+}
+
+.header__logout_icon {
+  cursor: pointer;
+  height: 24px;
+  padding-right: 7px;
+  width: 24px;
+  background: url("../../images/logout-white.svg") no-repeat center;
+}
+
+.header__logo_color_black {
+  color: black;
+}
+
+.header__home_button_black {
+  color: black;
+}
+.header__home_button_black:hover {
+  color: black;
+}
+
+.header__saved_articles_black {
+  color: black;
+  border-bottom: 3px solid black;
+}
+.header__logout_black {
+  color: black;
+  border: 1px solid black;
+}
+.header__logout_icon_black {
+  background: url("../../images/logout.svg") no-repeat center;
+}
+
+.header__hamburger {
+  display: none;
+  background: none;
+  border: none;
+  margin-right: 3%;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 756px) {
+  .header__hamburger {
+    display: flex;
+  }
+}
+
+.header__hamburger img {
+  width: 24px;
+}
