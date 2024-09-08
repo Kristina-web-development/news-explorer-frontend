@@ -101,51 +101,7 @@ export default function NewsCard({
             }
         }
     }
-
-    // useEffect(() => {
-    //     savedArticles &&
-    //         savedArticles.some((item) => item.title === article.title) &&
-    //         setIsSave(true);
-    // }, [savedArticles, article.title, isLoggedIn]);
-
-
-    // useEffect(() => {
-    //     savedArticles &&
-    //         savedArticles.some((item) => item.title === article.title) &&
-    //         setIsSave(true);
-    // }, [savedArticles, article.title]);
-    // useEffect(() => {
-    //     // if (location.pathname === "/") {
-    //     savedArticles &&
-    //         savedArticles.some((item) => item.title === article.title) &&
-    //         setIsSave(true);
-    //     // if (isLoggedIn) {
-    //     //     savedArticles.forEach((el) => {
-    //     //         if (el.title === article.title) {
-    //     //             setIsSave(true)
-    //     //         }
-    //     //     })
-    //     // }
-    //     // }
-    //     // eslint-disable-next-line
-    // }, [savedArticles, article.title])
-
-    // console.log(isLoggedIn)
-
-    // useEffect(() => {
-    //     if (location.pathname === "/") {
-    //         if (isLoggedIn) {
-    //             savedArticles.forEach((el) => {
-    //                 // eslint-disable-next-line
-    //                 if (el.title == article.title) {
-    //                     setIsSave(true)
-    //                 }
-    //             })
-    //         }
-    //     }
-    //     // eslint-disable-next-line
-    // }, [isLoggedIn, savedArticles, article.title])
-
+    
     return (
         <>
             {isLoggedIn ? (
